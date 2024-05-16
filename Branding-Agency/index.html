@@ -13,6 +13,8 @@
     <!-- Bootstrap cdn -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- bootstrap 4 cdn -->
+     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <!-- google icons cdn -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -26,6 +28,10 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.transitions.css">
+         
 
 </head>
 
@@ -139,11 +145,74 @@
 
 
 
-
-
-
-
-
+    <!-- Review section -->
+    <div class="container py-5">
+        <div class="row ">
+            <div class="col-md-12">
+                <div id="testimonial-slider" class="owl-carousel">
+                    <div class="testimonial">
+                        <div class="pic">
+                            <img src="https://scontent.flhe2-2.fna.fbcdn.net/v/t39.30808-6/424582191_3698076817181718_1254852609749937212_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=4k9bYVRnkycQ7kNvgEay2Tx&_nc_zt=23&_nc_ht=scontent.flhe2-2.fna&oh=00_AYAe58XDcuByApLqEK7ST5hsVlF880BC9UFmk5IJjs24lw&oe=664AC8A3" alt="">
+                        </div>
+                        <div class="testimonial-content">
+                            <p class="description">
+                                Direcly delivered the designs on time, but the client has yet to implement them in their platform, although they’re happy with the deliverables. They had a user-focused design process. Their team provided constant updates and recorded their processes on Loom to keep the client abreast of progress.
+                            </p>
+                            <h3 class="testimonial-title">Amir Hussain
+                                <small class="post">Web Developer</small>
+                            </h3>
+                        </div>
+                    </div>
+     
+                    <div class="testimonial">
+                        <div class="pic">
+                            <img src="https://i1.rgstatic.net/ii/profile.image/916442849484803-1595508410570_Q512/Dua-Fatima-2.jpg" alt="">
+                        </div>
+                        <div class="testimonial-content">
+                            <p class="description">
+                                The client has learned to trust Direcly, thanks to their significant knowledge in UI/UX design. The vendor has provided valuable feedback by always being readily available for communication. Moreover, they have a satisfying project management process that makes their process smooth and efficient.
+                            </p>
+                            <h3 class="testimonial-title">Fatima
+                                <small class="post">Web Designer</small>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Form -->
+   <div class="container-fluid pt-2" style="background-color: rgb(218, 247, 238)">
+    <div class="container contact-form">
+        <div class="contact-image">
+            <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact"/>
+        </div>
+        <form method="post">
+            <h3>Drop Us a Message</h3>
+           <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" name="txtName" class="form-control" placeholder="Your Name *" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="txtEmail" class="form-control" placeholder="Your Email *" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="txtPhone" class="form-control" placeholder="Your Phone Number *" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" name="btnSubmit" class="btnContact" value="Send Message" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <textarea name="txtMsg" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;"></textarea>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+   </div>
     <!-- footer section -->
     <footer id="footer" class="footer container-fluid">
         <div class="container">
@@ -151,7 +220,7 @@
                 <div class="col-lg-12">
                     <h2>Let's Grow Your Brand</h2>
                 </div>
-                <div class="row mt-lg-4">
+                <div class="row ms-none ms-lg-5 mt-lg-4">
                     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 mt-4 mt-xl-none footer-columns">
                         <ul>
                             <li><h3>Main Services</h3></li>
@@ -205,8 +274,8 @@
                     </div>
                 </div>
 
-                <div class="row p-3">
-                    <div class="col-lg-3 col-sm-3 col-6">
+                <div class="row ms-none ms-lg-5 p-3 footer-address">
+                    <div class="col-lg-3 col-sm-3 col-12 ftr-cols">
                         <div class="row">
                             <div class="col-xl-3 col-lg-12 ">
                                 <span class="tranparent-text">ZP</span>
@@ -221,7 +290,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-sm-3 col-6">
+                    <div class="col-lg-3 col-sm-3 col-12 ftr-cols">
                         <div class="row">
                             <div class="col-xl-3 col-lg-12 ">
                                 <span class="tranparent-text">MI</span>
@@ -236,7 +305,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-sm-3 col-6">
+                    <div class="col-lg-3 col-sm-3 col-12 ftr-cols">
                         <div class="row">
                             <div class="col-xl-3 col-lg-12 ">
                                 <span class="tranparent-text">PK</span>
@@ -251,7 +320,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-sm-3 col-6">
+                    <div class="col-lg-3 col-sm-3 col-12 ftr-cols">
                         <div class="row">
                             <div class="col-xl-3 col-lg-12 ">
                                 <span class="tranparent-text">BD</span>
@@ -283,8 +352,35 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">
+    </script>
+    <!-- contact form  -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
  
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+   
+    <!-- Review section  -->
+    <script>
+         $(document).ready(function(){
+        $("#testimonial-slider").owlCarousel({
+            items:1,
+            itemsDesktop:[1000,2],
+            itemsDesktopSmall:[979,1],
+            itemsTablet:[768,1],
+            pagination:false,
+            navigation:true,
+            slideSpeed:1000,
+            singleItem:true,
+            transitionStyle:"goDown",
+            navigationText:["",""],
+            autoPlay:false
+        });
+    });
+
+    </script>
+   
 </body>
 
 </html>
