@@ -10,10 +10,10 @@ function scrollFunction() {
 }
 
 // carousel items auto change
-
 var myCarousel = document.querySelector('#carouselExampleControlsNoTouching');
 var carousel = new bootstrap.Carousel(myCarousel, {
-    interval: 2000
+    interval: 2000,
 });
+
 
 
