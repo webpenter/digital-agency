@@ -77,6 +77,132 @@ body {
     height: 100%;
     
 }
+
+/* design process */
+.design-process .my-para {
+    font-size: 22px ;
+}
+
+/* card container section*/
+.section-cards {
+    padding: 15px 0px;
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of cards */
+    height: 480px;
+    
+}
+
+.section-cards .web-strategy {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 4px solid rgb(226, 225, 181);
+    padding: 10px;
+    outline: 2px solid rgb(209, 209, 228);
+    /* margin-top: 15px; */
+}
+
+.card-container {
+    flex: 1; 
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto; /* Adjust to the content height */
+}
+
+.card-container .card {
+    font-weight: bold;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-container .card a {
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    background: white;
+    text-decoration: none;
+    color: black;
+    display: block;
+    transition: 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-container .card a:hover {
+    transform: translate(-30px, -30px);
+    border-color: #5bc0eb;
+}
+
+.card-container .card a:hover .card--display {
+    display: none;
+}
+
+.card-container .card a:hover .card--hover {
+    display: block;
+}
+
+.card-container .card a .card--display h2 {
+    margin: 20px 0 0;
+    color: blue;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.card-container .card a .card--hover {
+    display: none;
+}
+
+.card-container .card a .card--hover h2 {
+    margin: 10px 0;
+    color: blue;
+}
+
+.card-container .card a .card--hover p {
+    font-weight: normal;
+    line-height: 1.5;
+    text-align: center;
+    font-size: 17px;
+}
+
+.card-container .card a .card--hover p.link {
+    margin: 20px 0 0;
+    font-weight: bold;
+    color: #5bc0eb;
+}
+
+.card-container .card .card--border {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border: 2px dashed black;
+    z-index: -1;
+}
+
+.card-container .card.card--dark a {
+    color: white;
+    background-color: black;
+    border-color: black;
+}
+
+.card-container .card.card--dark a .card--hover .link {
+    color: #fde74c;
+}
+
+
+
+
 /* Review section */
 
 .testimonial{
@@ -162,6 +288,21 @@ body {
 }
 
 /* contact form */
+.contact-image {
+    animation-name: scrollAnimation;
+    animation-duration: 1s; /* Adjust the duration as needed */
+    animation-iteration-count: infinite; /* To make the animation repeat infinitely */
+    animation-timing-function: linear; /* Linear timing */
+}
+
+    @keyframes scrollAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(50%);
+    }
+}
 
 .contact-form{
     background: rgb(218, 247, 238);
@@ -202,6 +343,10 @@ body {
     font-weight: 600;
     color: #fff;
     cursor: pointer;
+    transition: ease-in-out 1s;
+}
+.contact-form .btnContact:hover {
+    background: blue;
 }
 .btnContactSubmit
 {
@@ -278,13 +423,71 @@ body {
 .footer .footer-bottom br{
     display: none;
 }
+     .footer-logo {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 1s ease-out;
+}
+
+.footer-logo.show {
+    opacity: 1;
+    transform: translateX(0);
+}
 
 /* responsive starts here */
-
+@media only screen and (max-width: 1440px){
+    .contact-form .btnContact  {
+        width: 38%;
+    }
+}
 @media only screen and (max-width: 1024px) {
     /* carousel */
     .carousel-inner img {
         height: 500px !important;
+    }
+    /* cards responisve */
+    .card-container {
+        margin: 20px;
+    }
+    .section-cards {
+        padding: 15px 0px;
+        display: flex;
+        flex-wrap: wrap; /* Allow wrapping of cards */
+        height: 350px;  
+    }
+    .section-cards .web-strategy {
+        width: 100px;
+        height: 100px;
+    }
+    .card-container {
+        flex: 1; 
+        margin: 30px;
+        display: flex;
+        align-items: center;
+        margin-left: none;
+        justify-content: center;
+        height: 100%; /* Adjust to the content height */
+    }
+    .card-container .card a {
+        height: 100%;
+        padding: 20px;
+    }
+   
+    .card-container .card a:hover {
+        transform: none;
+    }
+    .card-container .card a .card--hover p {
+        font-weight: normal;
+        /* line-height: 1.5; */
+        text-align: center;
+        font-size: 15px;
+        text-align: justify;
+    }
+    .card-container .card a:hover .card--display {
+        display: none;
+    }
+    .card-container .card a:hover .card--hover {
+        display: block;
     }
     /* review */
     .testimonial{
@@ -317,6 +520,53 @@ body {
     .carousel-inner img {
         height: 450px !important;
     }
+    /* cards responsive */
+    .section-cards {
+        padding: 15px 0px;
+        display: flex;
+        flex-wrap: wrap; /* Allow wrapping of cards */
+        height: auto;  
+    }
+    .card-container {
+        flex: none; 
+        margin: 30px;
+        display: flex;
+        margin: none;
+        align-items: center;
+        justify-content: center;
+        height: 100%; /* Adjust to the content height */
+    }
+    .card-container {
+        width: 100%; 
+        margin: 10px 0; 
+        margin-left: none;
+    }
+    .card-container .card {
+        width: 100%; 
+        height: auto; 
+    }
+    .card-container .card a {
+        height: 100%; 
+        padding: 20px; 
+    }
+    .section-cards .web-strategy {
+        width: 90px;
+        height: 90px;
+        padding: 8px;
+    }
+    .card-container .card a:hover {
+        transform: none;
+    }
+    .card-container .card a:hover .card--display {
+        display: none;
+    }
+    .card-container .card a:hover .card--hover {
+        display: block;
+    }
+    /* design process */
+.design-process .my-para {
+    font-size: 19px ;
+}
     /* review */
     .testimonial{
         padding: 0;
@@ -374,6 +624,43 @@ body {
     }
     .navbar-nav .nav-link .fa-magnifying-glass {
         display: none;
+    }
+    /* design process */
+.design-process .my-para {
+    font-size: 16px ;
+}
+    /* cards responsive */
+    .section-cards {
+        padding: 15px 0px;
+        display: flex;
+        flex-wrap: wrap; /* Allow wrapping of cards */
+        height: auto;  
+    }
+    .card-container {
+        margin: 10px;
+        margin-left: auto;
+    }
+    .card-container .card {
+        width: 100%;
+    }
+    .card-container .card a {
+        height: auto;
+        padding: 15px;
+    }
+    .section-cards .web-strategy {
+        width: 80px;
+        height: 80px;
+        padding: 6px;
+    
+    }
+    .card-container .card a:hover {
+        transform: none;
+    }
+    .card-container .card a:hover .card--display {
+        display: none;
+    }
+    .card-container .card a:hover .card--hover {
+        display: block;
     }
     /* review */
     .testimonial .description{
