@@ -81,11 +81,12 @@ body {
 /* design process */
 
 .design-process .my-para {
-    font-size: 20px ;
+    font-size: 17px ;
     color: gray;
 }
 .design-process h2 {
-    color: blue;
+    color: black;
+    
 }
 .design-detail {
     padding: 10px 0px;
@@ -133,7 +134,7 @@ body {
 }
 .design-detail .myicons {
     font-size: 40px;
-    color: rgb(192, 37, 37);  
+    color: rgb(237 27 27); 
     text-align: center;
     align-content: center;
     cursor: pointer;
@@ -142,7 +143,7 @@ body {
 }
 
 .design-detail .description p {
-    font-size: 18px;
+    font-size: 17px;
 }
 .design-detail .description h2{
     font-weight: bold;
@@ -157,6 +158,152 @@ body {
 .myicons-c  {
     font-size: 28px;
     color: blue;
+}
+/* How to choose best webiste  */
+.clickreadfullmvoie {
+    cursor: pointer;
+}
+.clickreadfullmvoie i {
+    transform: rotate(90deg);
+    transition: ease-in-out 0.5s;
+}
+.clickreadfullmvoie :hover i {
+    transform: rotate(0deg);
+}
+.Table-of-Content {
+    width: 50%;
+    margin: auto;
+    display: none;
+}
+.Table-of-Content p {
+    font-size: 17px;
+    /* line-height: 2rem; */
+}
+.Table-of-Content .head {
+    box-shadow: 0px 3px 6px gray;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 10px;
+}
+.Table-of-Content .fa-arrow-down-up-across-line {
+    font-size: 10px;
+}
+.hide-article {
+    cursor: pointer;
+}
+.hide-article i {
+    transform: rotate(-90deg);
+    transition: ease-in-out 0.5s;
+}
+.hide-article:hover i {
+    transform: rotate(0deg);
+}
+
+
+
+/* newscard section  */
+
+
+.newscard {
+    padding: 50px 0px;
+    background-color: azure;
+}
+.newscard-heading {
+    font-weight: 900;
+}
+.newscard a {
+    text-decoration: none;
+}
+.newscard .card-img-top {
+    height: 200px;
+    transition: ease-in-out 1s;
+}
+.newscard .card-img-top:hover {
+    transform: scale(1.2);
+}
+.newscard .card {
+    border: none;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px lightgray;
+}
+.newscard .card-title {
+    font-weight: bold;
+}
+
+/* conservation section */
+.conservation {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: white;
+}
+.conservation .container-div {
+    width: 85%;
+}
+.social i {
+    font-size: 20px;
+    border: 2px solid rgb(177, 223, 231);
+    padding: 7px;
+    width: 37px;
+    border-radius: 50%;
+    text-align: center;  
+    color: rgb(8, 207, 241);
+    transition: ease-in-out 0.5s;
+}
+
+.social i:hover {
+    background-image: linear-gradient(blue, skyblue);
+    color: white;
+    border: 2px solid rgb(104, 104, 243);
+    cursor: pointer;
+}
+.beauty-direcly p {
+    font-weight: 600;
+    font-size: 18px;
+}
+.beauty-direcly h2{
+    font-weight: bold;
+    font-size: 40px;
+    color: rgb(8, 207, 241);
+}
+.contact-head h3 {
+    font-weight: bold;
+    font-size: 30px;
+}
+.contact-sec {
+    border-bottom: 1px solid rgb(204, 198, 198);
+}
+.contact-sec input {
+    border: none;
+    outline: none;
+    margin-top: 25px;
+    padding-bottom: 15px;
+    width: 70%;
+    background-color: transparent;
+}
+.contact-sec i {
+    font-size: 20px;
+    color: rgb(83, 81, 81);
+}
+.contact-msg{
+    height: 130px;
+    overflow-y: auto;
+}
+.contact-btn {
+    float: inline-end;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+.contact-btn  button {
+    border: 1px solid  rgb(204, 198, 198);
+    outline: none;
+    background-color: white;
+    border-radius: 5px;
+    transition: ease-in-out 0.5s;
+}
+.contact-btn  button:hover {
+    background-color: black;
+    color: white;
 }
 
 
@@ -183,7 +330,7 @@ body {
     font-weight: 700;
     font-size: 18px;
     margin-bottom: 25px;
-    color: rgb(58, 57, 57);
+    color: rgb(8, 207, 241);
 }
 .footer .footer-columns ul {
     padding-left: 17px;
@@ -212,7 +359,7 @@ body {
 .footer .tranparent-text {
     font-weight: bold;
     font-size: 42px;
-    color: rgba(128, 128, 128, 0.164);
+    color: rgba(8, 206, 241, 0.247);
 }
 .footer .address-name li {
     list-style: none;
@@ -254,6 +401,39 @@ body {
    .design-detail .description p {
     font-size: 17px;
 }
+    /* .conservation */
+    .conservation .container-div {
+        width: 60%;
+    }
+    .contact-head h3 {
+        font-weight: bold;
+        font-size: 25px;
+        text-align: center;
+    }
+    .beauty-direcly {
+        text-align: center;
+    }
+    .beauty-direcly p {
+        font-weight: 600;
+        font-size: 16px;
+    }
+    .beauty-direcly h2{
+        font-weight: bold;
+        font-size: 35px;
+    }
+    .contact-btn {
+        float:none;
+        text-align: center;
+        width: 100%;
+    }
+    .contact-btn  button {
+        width: 100%;
+    }
+    .social-icon {
+        width: 100%;
+       justify-content: center;
+
+    }
     /* footer */
     .footer hr { 
         width: 760px;
@@ -279,9 +459,12 @@ body {
     }
     /* .description */
     .design-detail .description p {
-        font-size: 16px;
+        font-size: 17px;
     }
-   
+      /* .conservation */
+      .conservation .container-div {
+        width: 90%;
+    }
     /* footer */
     .footer hr { 
         width: 500px;
@@ -328,6 +511,26 @@ body {
     .design-detail .description p {
         font-size: 16px;
     }
+     /* .conservation */
+     .contact-head h3 {
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+    }
+    .beauty-direcly p {
+        font-weight: 600;
+        font-size: 12px;
+    }
+    .beauty-direcly h2{
+        font-weight: bold;
+        font-size: 30px;
+    }
+    .social i {
+        font-size: 15px;
+        padding: 7px;
+        width: 33px;
+       
+    }
     /* .footer */
     .footer hr { 
         width: 180px;
@@ -352,7 +555,15 @@ body {
     .carousel-inner img {
         height: 270px !important;
     }
-     /* contact form */
+      /* .conservation */
+      .beauty-direcly p {
+        font-weight: 600;
+        font-size: 12px;
+    }
+    .beauty-direcly h2{
+        font-weight: bold;
+        font-size: 25px;
+    }
   
     /* footer */
     .footer hr { 
@@ -366,6 +577,11 @@ body {
       
         flex-wrap: wrap;
     }
+    .contact-head h3 {
+        font-weight: bold;
+        font-size: 19px;
+        text-align: center;
+    }
    
 }
 @media only screen and (max-width: 320px) {
@@ -373,8 +589,13 @@ body {
   .carousel-inner img {
     height: 250px !important;
 }
- /* contact form */
-
+/* .conservation */
+.social i {
+    font-size: 13px;
+    padding: 7px;
+    width: 3px;
+   
+}
 
 /* footer */
 .footer hr { 
