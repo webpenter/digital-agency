@@ -2,10 +2,36 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    padding: none;
-    margin: none;
-    font-family: poppins !important;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
 }
+
+.go-to-top {
+    position: fixed;
+    right: 30px;  
+    bottom: 20px;
+    z-index: 1000;
+}
+.go-to-top i {
+    font-size: 25px;
+    color: red;
+    transition: transform 0.5s ease-in-out;
+    animation: scaleUpDown 2s infinite; 
+}
+
+@keyframes scaleUpDown {
+    0%, 100% {
+        transform: scale(0.5);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 /* Header */
 #navbar {
     position: fixed;
@@ -206,7 +232,6 @@ body {
 
 .newscard {
     padding: 50px 0px;
-    background-color: azure;
 }
 .newscard-heading {
     font-weight: 900;
@@ -231,6 +256,140 @@ body {
     font-weight: bold;
 }
 
+/* Review Section */
+#carouselExampleAutoplaying {
+    height: auto;
+  }
+  
+  .reviewimg {
+    background-image: url('./Image/reviewimg.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 40px;
+    border-radius: 10px;
+  }
+  
+  .reviewtext h2{
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+    margin-top: 170px;
+  }
+  .review-logo {
+    width: 130px;
+    cursor: pointer;
+  }
+  .logo-div {
+    width:280px;
+    justify-content: center;
+    padding: 5px 0px;
+    border: 1px solid black;
+  }
+  .reviewtext h5{
+    color: white;
+  }
+  .carousel-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .myCard {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px gray;
+    overflow: hidden;
+    width: 320px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0px;
+  }
+  
+  .myCard:hover {
+    transform: scale(1.02);
+  }
+  
+  .R-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  
+  .R-top {
+    background-color: blue;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px;
+    border-radius: 0px 10px 0px 20px;
+  }
+  
+  .R-top img {
+    width: 100px !important;
+    height: 100px !important; /* Adjust the height of the image */
+    object-fit: cover; /* Ensure the image covers the area */
+    border: 4px solid rgb(238, 233, 233);
+  }
+
+  
+  .R-bottom {
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .R-bottom span {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    border-radius: 0px 40px 0px 55px;
+    right: -25px;
+    top: -24px;
+    background-color: blue;
+  }
+  
+  .R-bottom h2 {
+    margin: 0;
+    color: #333;
+    font-size: 21px;
+    font-weight: bold;
+  }
+  
+  .R-bottom p {
+    color: #777;
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  
+  .R-bottom .rating {
+    color: #FFD700;
+    margin-top: 10px;
+  }
+  
+  .Viewmore-btn {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 7px;
+    margin-top: 10px;
+    transition: ease-in-out 0.5s;
+  }
+  
+  .Viewmore-btn:hover {
+    background-color: rgb(17, 17, 187);
+  }
+  
+  
 /* conservation section */
 .conservation {
     padding-top: 40px;
@@ -313,7 +472,7 @@ body {
 /* footer */
 .footer {
     padding-top: 28px;
-    background-color: rgb(230, 229, 229);
+    background-color: rgb(253, 252, 252);
 }
 .footer .container h2 {
     font-size: 50px;
@@ -395,12 +554,15 @@ body {
 @media only screen and (max-width: 1024px) {
     /* carousel */
     .carousel-inner img {
-        height: 500px !important;
+        height: 450px !important;
     }
    /* .description */
    .design-detail .description p {
     font-size: 17px;
 }
+.carousel-inner .R-top img {
+    height:100px !important;
+  }
     /* .conservation */
     .conservation .container-div {
         width: 60%;
@@ -455,12 +617,18 @@ body {
     }
     /* carousel */
     .carousel-inner img {
-        height: 450px !important;
+        height: 350px !important;
     }
     /* .description */
     .design-detail .description p {
         font-size: 17px;
     }
+    .carousel-inner .R-top img  {
+        height:100px !important;
+      }
+      .reviewimg  {
+        display: none;
+      }
       /* .conservation */
       .conservation .container-div {
         width: 90%;
@@ -505,12 +673,18 @@ body {
 }
      /* carousel */
      .carousel-inner img {
-        height: 300px !important;
+        height: 250px !important;
     }
     /* .description */
     .design-detail .description p {
         font-size: 16px;
     }
+    .carousel-inner .R-top img {
+        height:100px !important;
+      }
+      .myCard1 {
+        display: none;
+      }
      /* .conservation */
      .contact-head h3 {
         font-weight: bold;
@@ -553,8 +727,11 @@ body {
 @media only screen and (max-width: 375px) {
     /* carousel */
     .carousel-inner img {
-        height: 270px !important;
+        height: 220px !important;
     }
+    .carousel-inner .R-top img {
+        height:100px !important;
+      }
       /* .conservation */
       .beauty-direcly p {
         font-weight: 600;
@@ -587,8 +764,11 @@ body {
 @media only screen and (max-width: 320px) {
   /* carousel */
   .carousel-inner img {
-    height: 250px !important;
+    height: 200px !important;
 }
+.carousel-inner .R-top img {
+    height:100px !important;
+  }
 /* .conservation */
 .social i {
     font-size: 13px;
